@@ -1,7 +1,7 @@
 import * as S from './styles';
 
 export const Home = () => {
-  let a;
+  let tby;
   console.log('teste');
   return <S.Container>olá</S.Container>;
 };

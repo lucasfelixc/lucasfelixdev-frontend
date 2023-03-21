@@ -9,7 +9,8 @@
     "lint": "next lint",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@types/node": "18.15.3",
@@ -42,8 +43,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write",
-      "eslint"
+      "yarn format",
+      "yarn lint:fix"
     ]
   }
 }
